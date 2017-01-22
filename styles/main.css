@@ -1,7 +1,7 @@
 .hero {
   font-family: 'Roboto', serif;
+  background-color: #8a94a3;
   text-align: center;
-  min-height: 800px;
   background-size: cover;
   padding-bottom: 50px;
   display: flex;
@@ -17,7 +17,7 @@
     font-size: 40px;
     line-height: 40px; }
   .hero.landscape {
-    color: #8a94a3; }
+    color: #eaeaea; }
 
 .cta {
   background-color: black;
