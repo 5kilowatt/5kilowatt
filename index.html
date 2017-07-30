@@ -4,11 +4,71 @@
 <title>5Kilowatt.com</title>
 <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,700" type="text/css">
-<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-<script src='js/main.js'></script>
+
 </head>
 
 <body>
-    <H1>5 kW</h1>
-    <h2>heat</h2>
+    <H1>5kilowatt.com</h1>
+    <h2>configurable electric heat</h2>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Qty</th>
+            <th>Tag</th>
+            <th>Manufacturer</th>
+            <th>Series</th>
+            <th>Cabinet Size</th>
+            <th>Air Flow Config</th>
+            <th>Element KW</th>
+            <th>Element Voltage</th>
+            <th>Phase</th>
+            <th>Accessories</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>CUH-1</td>
+            <td>Markel</td>
+            <td>6300</td>
+            <td>33"</td>
+            <td>Front in/Front out</td>
+            <td>3.0</td>
+            <td>208</td>
+            <td>3</td>
+            <td>filter, 2-stage t'stat, disc</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>CUH-2</td>
+            <td>Markel</td>
+            <td>6300</td>
+            <td>33"</td>
+            <td>Front in/Front out</td>
+            <td>6.0</td>
+            <td>208</td>
+            <td>3</td>
+            <td>filter, 2-stage t'stat, disc</td>
+          </tr>
+          <tr id="editRow">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
 </body>
+
+<script src='js/jquery-3.2.1.min.js'></script>
+<script src='js/main.js'></script>

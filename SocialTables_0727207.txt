@@ -1,0 +1,84 @@
+Ian, Air Force, Social Tables
+@onesien
+
+create-react-app
+will create a React one page app
+
+sidenote....if you haven't, get video studio code
+OK now we have a React App, log into Amazon
+
+create a new bucket
+S3 bucket, amazon will you a dns that you can point people to and it will serve up like a website.
+
+read/write enabled
+
+set up Static web hosting
+
+serve up index.html on SUCCESS and on ERROR
+(handle all errors in your APP)
+
+git push your app to the S3 bucket
+
+OK now what about the backend...data persistence/state
+
+Who's heard of serverless????
+apparently lots of people
+
+serverless enables you to create and deploy microservices to AWS
+
+npm install -g serverless
+
+serverless create --template aws-nodejs --path service
+
+this creates the service.
+
+serverless.yml
+this is where you hook up your functions to event requests in AWS (handlers).
+
+now we need data
+created a DynmoDB file in my .yml
+created DynamoPolicy in yml
+
+create .env  which is like an environment variable
+
+in the app...
+process.env.REACT_APP_SERVICE
+
+in the .env
+REACT_APP_SERVICE =  blah blah blah
+
+then serverless deploys the app, it'll put the right path into place where REACT_APP_SERVICE is in the code...
+
+bottom line
+S3 services only charges to transfer data and store data.  And does so at very low rates.
+
+because your application is 'serverless' there is no memory space to store user sessions
+
+JSON Web Tokens = JWT
+GWT = googles JWT
+use googles then user can 'login' using google creds.
+
+you must decrypt user credentials, then do your stuff.  It's a secure API becuase if the data doesn't decrypt it doesnt move forward.
+"the way that Google does it is the way that many other people do it" so it's easy to make it work for Facebook, Microsoft, etc.
+
+you can pay more to DNS your location
+
+public repo on github
+onesian
+
+Q&A...
+
+1.
+api gateway has throttling.  Do throttling thru the .yml
+2.
+your serverless .yml file is translated to a cloudformation serverless-state.json.  so you don't edit a .yml on the service
+3.
+serverless -remove tore down EVERYTHING.  so, like your DB is gone?????
+ANSWER:  YES!!!!
+holy shit.
+there is no way to backup / restore DynamoDB
+so this is for SIDE PROJECTS.
+Ian is using POSTGRESS
+4.
+you can get "free" 'certs' from AWS.  (dunno what that means) but you have to 'cloud front it'.  Say you're a STARTUP and they'll give you some free credits.
+currently they are DNSing thru GOOGLE DOMAINS
